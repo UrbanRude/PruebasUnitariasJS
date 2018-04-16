@@ -1,0 +1,16 @@
+-- Instalar Framework MOCHA
+>> npm install -g mocha
+
+-- Inicializar el proyecto
+>> npm init
+
+-- Instalar la libreria CHAI
+>> npm install chai --save-dev
+
+-- Comandos GIT
+echo "# PruebasUnitariasJS" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/UrbanRude/PruebasUnitariasJS.git
+git push -u origin master
