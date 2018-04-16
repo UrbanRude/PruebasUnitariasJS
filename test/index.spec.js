@@ -17,8 +17,18 @@ describe("Pruebas unitarias del archivo JS",function(){
     it("Dividir no puede dividir entre cero",function(){
         expect(index.dividirDosNumeros(5,0)).equal(Infinity);
     });
-    it("Dividir no puede dividir entre ceroII",function(){
+    /*it("Dividir no puede dividir entre ceroII",function(){
         expect(index.dividirDosNumeros(0,5)).equal(Infinity);
+    });*/
+    it("addDatos debe de verificar la existencia de una propiedad hola",function(){
+        var json = {data:"mundo"};
+        var jsonComplete = index.addDatos(json);
+        jsonComplete.should.have.property("hola");
+    });
+    it("Validar datos debe de comprar y verificar si son iguales",function(){
+        var json2 = {nombre:"Urbano",apellidos:"Ceron Santillan",edad:24};
+        var json1 = index.validarDatos();
+        expect(json1).to.deep.equal(json2);
     });
 });
 
